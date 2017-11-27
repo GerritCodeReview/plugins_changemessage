@@ -26,8 +26,7 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
   private final PluginConfigFactory cfgFactory;
 
   @Inject
-  public GetChangeInfo(@PluginName String pluginName,
-      PluginConfigFactory cfgFactory) {
+  public GetChangeInfo(@PluginName String pluginName, PluginConfigFactory cfgFactory) {
     this.pluginName = pluginName;
     this.cfgFactory = cfgFactory;
   }
@@ -35,8 +34,8 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
   @Override
   public String apply(ChangeResource rsrc) {
     PluginConfig cfg =
-        cfgFactory.getFromProjectConfig(rsrc.getControl().getProjectControl()
-            .getProjectState(), pluginName);
+        cfgFactory.getFromProjectConfig(
+            rsrc.getControl().getProjectControl().getProjectState(), pluginName);
     return cfg.getString("changeInfo");
   }
 }

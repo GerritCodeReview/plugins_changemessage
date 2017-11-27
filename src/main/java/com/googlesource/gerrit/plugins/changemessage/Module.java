@@ -20,7 +20,6 @@ import com.google.gerrit.extensions.annotations.Exports;
 import com.google.gerrit.extensions.restapi.RestApiModule;
 import com.google.gerrit.server.config.ProjectConfigEntry;
 import com.google.inject.AbstractModule;
-
 import com.googlesource.gerrit.plugins.changemessage.rest.GetChangeInfo;
 
 class Module extends AbstractModule {
@@ -30,11 +29,12 @@ class Module extends AbstractModule {
         .annotatedWith(Exports.named("changeInfo"))
         .toInstance(new ProjectConfigEntry("Change Info Message", null, true));
 
-    install(new RestApiModule() {
-      @Override
-      protected void configure() {
-        get(CHANGE_KIND, "info").to(GetChangeInfo.class);
-      }
-    });
+    install(
+        new RestApiModule() {
+          @Override
+          protected void configure() {
+            get(CHANGE_KIND, "info").to(GetChangeInfo.class);
+          }
+        });
   }
 }

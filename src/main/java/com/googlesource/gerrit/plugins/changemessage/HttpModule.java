@@ -22,7 +22,6 @@ import com.google.inject.servlet.ServletModule;
 class HttpModule extends ServletModule {
   @Override
   protected void configureServlets() {
-    DynamicSet.bind(binder(), WebUiPlugin.class)
-        .toInstance(new JavaScriptPlugin("info.js"));
+    DynamicSet.bind(binder(), WebUiPlugin.class).toInstance(new JavaScriptPlugin("info.js"));
   }
 }
