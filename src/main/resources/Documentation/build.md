@@ -3,6 +3,9 @@ Build
 
 This plugin is built with Bazel.
 
+Build in Gerrit tree
+--------------------
+
 Clone (or link) this plugin to the `plugins` directory of Gerrit's source tree.
 
 Then issue
@@ -25,4 +28,25 @@ Gerrit core in `tools/bzl/plugins.bzl`, and execute:
 
 ```
   ./tools/eclipse/project.py
+```
+
+Build standalone
+----------------
+
+To build the plugin, issue the following command:
+
+```
+bazel build @PLUGIN@
+```
+
+The output is created in
+
+```
+bazel-genfiles/@PLUGIN@.jar
+```
+
+This project can be imported into the Eclipse IDE:
+
+```
+./tools/eclipse/project.sh
 ```
