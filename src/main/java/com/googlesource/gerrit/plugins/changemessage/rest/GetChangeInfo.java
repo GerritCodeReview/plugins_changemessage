@@ -34,7 +34,7 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
   @Override
   public String apply(ChangeResource rsrc) {
     PluginConfig cfg =
-        cfgFactory.getFromProjectConfig(
+        cfgFactory.getFromProjectConfigWithInheritance(
             rsrc.getControl().getProjectControl().getProjectState(), pluginName);
     return cfg.getString("changeInfo");
   }
