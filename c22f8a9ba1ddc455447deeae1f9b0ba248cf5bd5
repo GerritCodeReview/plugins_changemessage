@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d43bbec8_95c900e6",
+        "filename": ".gitignore",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2017-11-28T20:20:03Z",
+      "side": 1,
+      "message": "/eclipse-out to be consistent with other entries",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 11
+      },
+      "revId": "c22f8a9ba1ddc455447deeae1f9b0ba248cf5bd5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8cb81bc_2d6c341f",
+        "filename": "tools/eclipse/project.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2017-11-28T20:20:03Z",
+      "side": 1,
+      "message": "remove trailing space",
+      "range": {
+        "startLine": 17,
+        "startChar": 138,
+        "endLine": 17,
+        "endChar": 139
+      },
+      "revId": "c22f8a9ba1ddc455447deeae1f9b0ba248cf5bd5",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
