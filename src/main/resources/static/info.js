@@ -26,7 +26,22 @@ Gerrit.install(function(self) {
         if (r != null) {
           var doc = document;
           var frg = doc.createDocumentFragment();
-          var p = doc.createElement('p');
+	  var p = doc.createElement('textarea');
+	  p.style.border = "3px solid transparent";
+	  p.style.borderRadius = "10px";
+	  p.style.boxShadow = "0 0 0 3px #fff1a8";
+	  p.style.background = "#fff1a8";
+	  p.style.minWidth = "100%";
+	  p.style.maxWidth = "458px";
+	  p.style.height = "35px";
+	  p.style.minHeight = "35px";
+	  p.style.maxHeight = "125px";
+          p.style.paddingTop = "5px";
+	  p.style.paddingBottom = "5px";
+	  p.style.paddingLeft = "5px";
+	  p.style.paddingRight = "5px";
+	  p.style.overflow = "auto";
+	  p.setAttribute("readonly",true);
           p.appendChild(doc.createTextNode(r));
           frg.appendChild(p);
 
