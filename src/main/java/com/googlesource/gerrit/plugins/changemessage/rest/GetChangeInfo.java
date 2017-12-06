@@ -34,7 +34,8 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
 
   @Override
   public String apply(ChangeResource rsrc) throws NoSuchProjectException {
-    PluginConfig cfg = cfgFactory.getFromProjectConfig(rsrc.getProject(), pluginName);
+    PluginConfig cfg =
+        cfgFactory.getFromProjectConfigWithInheritance(rsrc.getProject(), pluginName);
     return cfg.getString("changeInfo");
   }
 }
