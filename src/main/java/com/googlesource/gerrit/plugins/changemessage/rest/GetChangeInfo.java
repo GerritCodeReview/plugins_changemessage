@@ -19,6 +19,7 @@ import com.google.gerrit.extensions.restapi.RestReadView;
 import com.google.gerrit.server.change.ChangeResource;
 import com.google.gerrit.server.config.PluginConfig;
 import com.google.gerrit.server.config.PluginConfigFactory;
+import com.google.gerrit.server.project.NoSuchProjectException;
 import com.google.inject.Inject;
 
 public class GetChangeInfo implements RestReadView<ChangeResource> {
@@ -32,10 +33,9 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
   }
 
   @Override
-  public String apply(ChangeResource rsrc) {
+  public String apply(ChangeResource rsrc) throws NoSuchProjectException {
     PluginConfig cfg =
-        cfgFactory.getFromProjectConfig(
-            rsrc.getControl().getProjectControl().getProjectState(), pluginName);
+        cfgFactory.getFromProjectConfigWithInheritance(rsrc.getProject(), pluginName);
     return cfg.getString("changeInfo");
   }
 }
