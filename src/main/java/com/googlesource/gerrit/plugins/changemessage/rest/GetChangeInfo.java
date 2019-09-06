@@ -15,6 +15,7 @@
 package com.googlesource.gerrit.plugins.changemessage.rest;
 
 import com.google.gerrit.extensions.annotations.PluginName;
+import com.google.gerrit.extensions.restapi.Response;
 import com.google.gerrit.extensions.restapi.RestReadView;
 import com.google.gerrit.server.change.ChangeResource;
 import com.google.gerrit.server.config.PluginConfig;
@@ -33,9 +34,9 @@ public class GetChangeInfo implements RestReadView<ChangeResource> {
   }
 
   @Override
-  public String apply(ChangeResource rsrc) throws NoSuchProjectException {
+  public Response apply(ChangeResource rsrc) throws NoSuchProjectException {
     PluginConfig cfg =
         cfgFactory.getFromProjectConfigWithInheritance(rsrc.getProject(), pluginName);
-    return cfg.getString("changeInfo");
+    return Response.ok(cfg.getString("changeInfo"));
   }
 }
