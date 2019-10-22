@@ -19,7 +19,7 @@ in the root of Gerrit's source tree to build
 The output is created in
 
 ```
-  bazel-genfiles/plugins/changemessage/changemessage.jar
+  bazel-bin/plugins/changemessage/changemessage.jar
 ```
 
 This project can be imported into the Eclipse IDE.
@@ -42,7 +42,7 @@ bazel build @PLUGIN@
 The output is created in
 
 ```
-bazel-genfiles/@PLUGIN@.jar
+bazel-bin/@PLUGIN@.jar
 ```
 
 This project can be imported into the Eclipse IDE:
