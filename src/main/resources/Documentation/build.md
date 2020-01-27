@@ -11,7 +11,7 @@ Clone (or link) this plugin to the `plugins` directory of Gerrit's source tree.
 Then issue
 
 ```
-  bazel build plugins/changemessage
+  bazel build plugins/@PLUGIN@
 ```
 
 in the root of Gerrit's source tree to build
@@ -19,7 +19,7 @@ in the root of Gerrit's source tree to build
 The output is created in
 
 ```
-  bazel-bin/plugins/changemessage/changemessage.jar
+  bazel-bin/plugins/@PLUGIN@/@PLUGIN@.jar
 ```
 
 This project can be imported into the Eclipse IDE.
