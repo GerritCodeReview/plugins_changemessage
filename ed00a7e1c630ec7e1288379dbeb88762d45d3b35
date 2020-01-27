@@ -22,6 +22,30 @@
       "revId": "ed00a7e1c630ec7e1288379dbeb88762d45d3b35",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "667eac46_1296b865",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-01-27T20:01:51Z",
+      "side": 1,
+      "message": "\u003e Not in this change case.\n\nMy bad.",
+      "parentUuid": "816cea6f_1119afa0",
+      "range": {
+        "startLine": 9,
+        "startChar": 38,
+        "endLine": 9,
+        "endChar": 45
+      },
+      "revId": "ed00a7e1c630ec7e1288379dbeb88762d45d3b35",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
