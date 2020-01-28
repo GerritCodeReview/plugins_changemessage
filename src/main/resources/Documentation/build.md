@@ -50,3 +50,7 @@ This project can be imported into the Eclipse IDE:
 ```
 ./tools/eclipse/project.sh
 ```
+
+[Back to @PLUGIN@ documentation index][index]
+
+[index]: index.html
